@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>招标信息工作台</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <h1>招标信息工作台</h1>
+          <p id="updatedAt">正在读取数据...</p>
+        </div>
+        <a class="download" id="downloadLink" href="downloads/招标信息总表.xlsx">下载总表</a>
+      </header>
+
+      <section class="stats" aria-label="数据概览">
+        <article>
+          <span>入表项目</span>
+          <strong id="totalCount">0</strong>
+        </article>
+        <article>
+          <span>采招网</span>
+          <strong id="bidcenterCount">0</strong>
+        </article>
+        <article>
+          <span>中招/华润</span>
+          <strong id="publicCount">0</strong>
+        </article>
+      </section>
+
+      <section class="filters" aria-label="筛选">
+        <label>
+          <span>关键词</span>
+          <input id="searchInput" type="search" placeholder="搜索项目、采购方、设备" />
+        </label>
+        <label>
+          <span>来源</span>
+          <select id="sourceFilter">
+            <option value="">全部来源</option>
+          </select>
+        </label>
+        <label>
+          <span>日期</span>
+          <select id="dateFilter">
+            <option value="">全部日期</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="table-wrap" aria-label="招标项目">
+        <table>
+          <thead>
+            <tr>
+              <th>项目名称</th>
+              <th>采购内容</th>
+              <th>采购方</th>
+              <th>来源</th>
+              <th>发布时间</th>
+              <th>状态</th>
+              <th>链接</th>
+            </tr>
+          </thead>
+          <tbody id="bidRows">
+            <tr>
+              <td colspan="7" class="empty">正在读取数据...</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
