@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-14T10:43:08",
-  "updated_at": "2026-08-14T10:43:06",
+  "generated_at": "2026-08-14T11:05:04",
+  "updated_at": "2026-08-14T11:05:03",
   "total": 154,
   "source_counts": {
     "采招网": 93,
@@ -72,12 +72,12 @@
     "all_sites_ok": false,
     "sites": {
       "bidcenter_blue": {
-        "status": "ok",
-        "reason": "由采招网Blue独立采集器采集并在发布阶段合并"
+        "status": "failed",
+        "reason": "0/120个关键词检索有效；读取失败0，页面结构异常120，不能按0条结果处理"
       },
       "szecp": {
         "status": "ok",
-        "reason": "关键词检索成功，候选190条"
+        "reason": "关键词检索成功，候选189条"
       },
       "365trade": {
         "status": "ok",
@@ -85,7 +85,7 @@
       },
       "cebpubservice": {
         "status": "partial",
-        "reason": "部分关键词检索失败，保留候选211条：缺陷复检: Page.goto: Timeout 10000ms exceeded.\nCall log:\n  - navigating to \"https://bulletin.cebpubservice.com/xxfbcmses/search/bulletin.html?searchDate=2026-08-14&dates=15&word=%E7%BC%BA%E9%99%B7%E5%A4%8D%E6%A3%80&categoryId=88&industryName=&area=&status=&publishMedia=&sourceInfo=&showStatus=&page=1\", waiting until \"domcontentloaded\"\n；全表面检测: Page.goto: Timeout 10000ms exceeded.\nCall log:\n  - navigating to \"https://bulletin.cebpubservice.com/xxfbcmses/search/bulletin.html?searchDate=2026-08-14&dates=15&word=%E5%85%A8%E8%A1%A8%E9%9D%A2%E6%A3%80%E6%B5%8B&categoryId=88&industryName=&area=&status=&publishMedia=&sourceInfo=&showStatus=&page=1\", waiting until \"domcontentloaded\"\n；差分干涉: Page.goto: Timeout 10000ms exceeded.\nCall log:\n  - navigating to \"https://bulletin.cebpubservice.com/xxfbcmses/search/bulletin.html?searchDate=2026-08-14&dates=15&word=%E5%B7%AE%E5%88%86%E5%B9%B2%E6%B6%89&categoryId=88&industryName=&area=&status=&publishMedia=&sourceInfo=&showStatus=&page=1\", waiting until \"domcontentloaded\"\n"
+        "reason": "部分关键词检索失败，保留候选43条：碳化硅: Page.goto: Timeout 10000ms exceeded.\nCall log:\n  - navigating to \"https://bulletin.cebpubservice.com/xxfbcmses/search/bulletin.html?searchDate=2026-08-14&dates=90&word=%E7%A2%B3%E5%8C%96%E7%A1%85&categoryId=88&industryName=&area=&status=&publishMedia=&sourceInfo=&showStatus=&page=1\", waiting until \"domcontentloaded\"\n；无图案晶圆: Page.goto: Timeout 10000ms exceeded.\nCall log:\n  - navigating to \"https://bulletin.cebpubservice.com/xxfbcmses/search/bulletin.html?searchDate=2026-08-14&dates=90&word=%E6%97%A0%E5%9B%BE%E6%A1%88%E6%99%B6%E5%9C%86&categoryId=88&industryName=&area=&status=&publishMedia=&sourceInfo=&showStatus=&page=1\", waiting until \"domcontentloaded\"\n；暗场: Page.goto: Timeout 10000ms exceeded.\nCall log:\n  - navigating to \"https://bulletin.cebpubservice.com/xxfbcmses/search/bulletin.html?searchDate=2026-08-14&dates=90&word=%E6%9A%97%E5%9C%BA&categoryId=88&industryName=&area=&status=&publishMedia=&sourceInfo=&showStatus=&page=1\", waiting until \"domcontentloaded\"\n"
       },
       "chinabidding": {
         "status": "ok",
@@ -93,7 +93,7 @@
       },
       "ebnew": {
         "status": "ok",
-        "reason": "关键词检索成功，候选270条"
+        "reason": "关键词检索成功，候选269条"
       }
     }
   },
