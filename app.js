@@ -9,6 +9,7 @@ const els = {
   totalCount: document.querySelector("#totalCount"),
   bidcenterCount: document.querySelector("#bidcenterCount"),
   publicCount: document.querySelector("#publicCount"),
+  siteHealth: document.querySelector("#siteHealth"),
   downloadLink: document.querySelector("#downloadLink"),
   searchInput: document.querySelector("#searchInput"),
   sourceFilter: document.querySelector("#sourceFilter"),
@@ -48,6 +49,17 @@ function renderStats(payload) {
     .reduce((sum, [, count]) => sum + count, 0);
   els.updatedAt.textContent = `数据更新时间：${payload.updated_at || payload.generated_at || "未知"}`;
   els.downloadLink.href = payload.download || "downloads/招标信息总表.xlsx";
+}
+
+function renderHealth(payload) {
+  const health = payload.site_health || {};
+  const sites = health.sites || {};
+  const labels = Object.entries(sites).map(([name, item]) => {
+    const status = item.status || "unverified";
+    const marker = status === "ok" ? "正常" : status === "partial" ? "部分成功" : "失败/待补跑";
+    return `<span class="health-${escapeHtml(status)}" title="${escapeHtml(item.reason || "")}">${escapeHtml(name)}：${marker}</span>`;
+  });
+  els.siteHealth.innerHTML = `<strong>六站采集状态（${escapeHtml(health.date || "未知日期")}）</strong>${labels.join("") || "<span>暂无状态</span>"}`;
 }
 
 function renderFilters(items) {
@@ -118,6 +130,7 @@ async function loadData() {
     state.payload = payload;
     state.items = payload.items || [];
     renderStats(payload);
+    renderHealth(payload);
     renderFilters(state.items);
     applyFilters();
   } catch (error) {
