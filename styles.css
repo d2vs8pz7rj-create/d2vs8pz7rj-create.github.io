@@ -220,3 +220,20 @@ td:nth-child(6) {
     grid-template-columns: 1fr;
   }
 }
+
+
+.site-health {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin: 14px 0;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: #f3f6fa;
+  color: #334155;
+}
+.site-health span { padding: 4px 8px; border-radius: 999px; background: #fff; }
+.site-health .health-ok { color: #047857; }
+.site-health .health-partial { color: #b45309; }
+.site-health .health-failed, .site-health .health-blocked { color: #b91c1c; }
