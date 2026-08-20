@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-19T12:05:11",
-  "updated_at": "2026-08-19T12:05:09",
+  "generated_at": "2026-08-20T12:08:45",
+  "updated_at": "2026-08-20T12:08:44",
   "total": 190,
   "source_counts": {
     "华润守正": 37,
@@ -76,7 +76,7 @@
     "2026-05-17": 1
   },
   "site_health": {
-    "date": "2026-08-19",
+    "date": "2026-08-20",
     "all_sites_ok": false,
     "sites": {
       "bidcenter_blue": {
@@ -85,23 +85,23 @@
       },
       "szecp": {
         "status": "ok",
-        "reason": "关键词检索成功，候选77条"
+        "reason": "关键词检索成功，候选68条"
       },
       "365trade": {
         "status": "ok",
-        "reason": "关键词检索成功，候选54条"
+        "reason": "关键词检索成功，候选55条"
       },
       "cebpubservice": {
-        "status": "ok",
-        "reason": "关键词检索成功，候选38条"
+        "status": "partial",
+        "reason": "部分关键词检索失败，保留候选33条：晶圆: Page.goto: Timeout 10000ms exceeded.\nCall log:\n  - navigating to \"https://bulletin.cebpubservice.com/xxfbcmses/search/bulletin.html?searchDate=2026-08-20&dates=15&word=%E6%99%B6%E5%9C%86&categoryId=88&industryName=&area=&status=&publishMedia=&sourceInfo=&showStatus=&page=1\", waiting until \"domcontentloaded\"\n；暗场: Page.goto: Timeout 10000ms exceeded.\nCall log:\n  - navigating to \"https://bulletin.cebpubservice.com/xxfbcmses/search/bulletin.html?searchDate=2026-08-20&dates=15&word=%E6%9A%97%E5%9C%BA&categoryId=88&industryName=&area=&status=&publishMedia=&sourceInfo=&showStatus=&page=1\", waiting until \"domcontentloaded\"\n；明场: Page.goto: Timeout 10000ms exceeded.\nCall log:\n  - navigating to \"https://bulletin.cebpubservice.com/xxfbcmses/search/bulletin.html?searchDate=2026-08-20&dates=15&word=%E6%98%8E%E5%9C%BA&categoryId=88&industryName=&area=&status=&publishMedia=&sourceInfo=&showStatus=&page=1\", waiting until \"domcontentloaded\"\n"
       },
       "chinabidding": {
         "status": "ok",
-        "reason": "关键词检索成功，候选30条"
+        "reason": "关键词检索成功，候选34条"
       },
       "ebnew": {
         "status": "ok",
-        "reason": "关键词检索成功，候选130条"
+        "reason": "关键词检索成功，候选146条"
       }
     }
   },
