@@ -1,16 +1,17 @@
 {
-  "generated_at": "2026-08-20T15:50:06",
-  "updated_at": "2026-08-20T15:50:04",
-  "total": 192,
+  "generated_at": "2026-08-21T12:07:46",
+  "updated_at": "2026-08-21T12:07:45",
+  "total": 193,
   "source_counts": {
+    "华润守正": 39,
     "必联网": 39,
-    "华润守正": 38,
     "机电产品招标投标电子交易平台": 5,
     "中招联合": 10,
     "采招网": 98,
     "中国招标投标公共服务平台": 2
   },
   "date_counts": {
+    "2026-08-20": 1,
     "2026-08-19": 1,
     "2026-08-18": 1,
     "2026-08-17": 6,
@@ -77,37 +78,55 @@
     "2026-05-17": 1
   },
   "site_health": {
-    "date": "2026-08-20",
+    "date": "2026-08-21",
     "all_sites_ok": false,
     "sites": {
       "bidcenter_blue": {
-        "status": "partial",
-        "reason": "120/120个关键词检索有效，保留标题候选370条；识别到采招网风控后立即停止详情读取；实际尝试120/120；证据=详情页触发风控；status=200；url=https://www.bidcenter.com.cn/news-437328839-1.html；title=江苏纳沛斯半导体有限公司BUMP新增隔间及化学滤网项目招标公告-采招网；risk=验证码；当天禁止自动重跑"
+        "status": "unverified",
+        "reason": "采招网Blue本次采集健康报告不存在"
       },
       "szecp": {
         "status": "ok",
-        "reason": "关键词检索成功，候选68条"
+        "reason": "关键词检索成功，候选71条"
       },
       "365trade": {
         "status": "ok",
-        "reason": "关键词检索成功，候选55条"
+        "reason": "关键词检索成功，候选59条"
       },
       "cebpubservice": {
         "status": "partial",
-        "reason": "部分关键词检索失败，保留候选33条：晶圆: Page.goto: Timeout 10000ms exceeded.\nCall log:\n  - navigating to \"https://bulletin.cebpubservice.com/xxfbcmses/search/bulletin.html?searchDate=2026-08-20&dates=15&word=%E6%99%B6%E5%9C%86&categoryId=88&industryName=&area=&status=&publishMedia=&sourceInfo=&showStatus=&page=1\", waiting until \"domcontentloaded\"\n；暗场: Page.goto: Timeout 10000ms exceeded.\nCall log:\n  - navigating to \"https://bulletin.cebpubservice.com/xxfbcmses/search/bulletin.html?searchDate=2026-08-20&dates=15&word=%E6%9A%97%E5%9C%BA&categoryId=88&industryName=&area=&status=&publishMedia=&sourceInfo=&showStatus=&page=1\", waiting until \"domcontentloaded\"\n；明场: Page.goto: Timeout 10000ms exceeded.\nCall log:\n  - navigating to \"https://bulletin.cebpubservice.com/xxfbcmses/search/bulletin.html?searchDate=2026-08-20&dates=15&word=%E6%98%8E%E5%9C%BA&categoryId=88&industryName=&area=&status=&publishMedia=&sourceInfo=&showStatus=&page=1\", waiting until \"domcontentloaded\"\n"
+        "reason": "部分关键词检索失败，保留候选41条：无图案晶圆: Page.goto: Timeout 10000ms exceeded.\nCall log:\n  - navigating to \"https://bulletin.cebpubservice.com/xxfbcmses/search/bulletin.html?searchDate=2026-08-21&dates=15&word=%E6%97%A0%E5%9B%BE%E6%A1%88%E6%99%B6%E5%9C%86&categoryId=88&industryName=&area=&status=&publishMedia=&sourceInfo=&showStatus=&page=1\", waiting until \"domcontentloaded\"\n"
       },
       "chinabidding": {
         "status": "ok",
-        "reason": "关键词检索成功，候选34条"
+        "reason": "关键词检索成功，候选30条"
       },
       "ebnew": {
         "status": "ok",
-        "reason": "关键词检索成功，候选146条"
+        "reason": "关键词检索成功，候选139条"
       }
     }
   },
   "download": "downloads/招标信息总表.xlsx",
   "items": [
+    {
+      "项目名称": "润鹏半导体(深圳)有限公司润鹏半导体90nm BCD平台1.5V SRAM TQV IP 采购项目谈判采购公告",
+      "判断类别": "半导体检测/量测设备",
+      "具体采购内容": "润鹏半导体(深圳)有限公司润鹏半导体90nm BCD平台1.5V SRAM TQV IP 采购项目谈判",
+      "纳入理由": "TED，且公告具有半导体产业链语境",
+      "关键信息摘要": "采购内容：润鹏半导体(深圳)有限公司润鹏半导体90nm BCD平台1.5V SRAM TQV IP 采购项目谈判；公告类型：采购公告；发布时间：2026-08-20",
+      "采购方/招标人": "",
+      "中标人/候选人": "",
+      "发布时间": "2026-08-20",
+      "报名/截止/开标时间": "",
+      "来源网站": "华润守正",
+      "公告类型": "采购公告",
+      "项目状态": "进行中/未知",
+      "预算/最高限价": "",
+      "中标/成交金额": "",
+      "原文链接": "https://www.szecp.com.cn/first_cggg/2026-08-20/2783632.html",
+      "采集时间": "2026-08-21T12:07:43"
+    },
     {
       "项目名称": "陕西电子芯业时代科技有限公司8吋 膜厚 仪采购项目（二次）中标结果公告(1)",
       "判断类别": "待核验-缺少晶圆/衬底场景",
