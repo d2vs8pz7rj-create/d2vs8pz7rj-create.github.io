@@ -65,17 +65,22 @@ h1 {
 
 .stats {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 12px;
   margin: 8px 0 14px;
 }
 
 .stats article {
-  min-height: 86px;
+  min-height: 82px;
   padding: 16px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--panel);
+}
+
+.stats .stat-total {
+  border-color: #9bbbd2;
+  background: #eef5fa;
 }
 
 .stats span {
@@ -215,9 +220,16 @@ td:nth-child(6) {
     font-size: 24px;
   }
 
-  .stats,
   .filters {
     grid-template-columns: 1fr;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stats .stat-total {
+    grid-column: 1 / -1;
   }
 }
 
