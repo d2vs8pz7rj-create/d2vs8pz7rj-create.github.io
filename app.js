@@ -4,11 +4,35 @@ const state = {
   payload: null,
 };
 
+const siteConfig = [
+  { key: "bidcenter_blue", source: "采招网", label: "采招网" },
+  { key: "szecp", source: "华润守正", label: "华润守正" },
+  { key: "365trade", source: "中招联合", label: "中招联合" },
+  {
+    key: "cebpubservice",
+    source: "中国招标投标公共服务平台",
+    label: "公共服务平台",
+  },
+  {
+    key: "chinabidding",
+    source: "机电产品招标投标电子交易平台",
+    label: "机电产品交易平台",
+  },
+  { key: "ebnew", source: "必联网", label: "必联网" },
+];
+
+const healthLabels = {
+  ok: "正常",
+  partial: "部分成功",
+  failed: "失败",
+  blocked: "已停止",
+  unverified: "未验证",
+};
+
 const els = {
   updatedAt: document.querySelector("#updatedAt"),
   totalCount: document.querySelector("#totalCount"),
-  bidcenterCount: document.querySelector("#bidcenterCount"),
-  publicCount: document.querySelector("#publicCount"),
+  sourceStats: [...document.querySelectorAll("[data-source]")],
   siteHealth: document.querySelector("#siteHealth"),
   downloadLink: document.querySelector("#downloadLink"),
   searchInput: document.querySelector("#searchInput"),
@@ -43,10 +67,10 @@ function fillSelect(select, values, allLabel) {
 function renderStats(payload) {
   const sourceCounts = payload.source_counts || {};
   els.totalCount.textContent = payload.total || 0;
-  els.bidcenterCount.textContent = sourceCounts["采招网"] || 0;
-  els.publicCount.textContent = Object.entries(sourceCounts)
-    .filter(([source]) => source !== "采招网")
-    .reduce((sum, [, count]) => sum + count, 0);
+  els.sourceStats.forEach((stat) => {
+    const source = stat.dataset.source;
+    stat.querySelector("strong").textContent = sourceCounts[source] || 0;
+  });
   els.updatedAt.textContent = `数据更新时间：${payload.updated_at || payload.generated_at || "未知"}`;
   els.downloadLink.href = payload.download || "downloads/招标信息总表.xlsx";
 }
@@ -54,10 +78,18 @@ function renderStats(payload) {
 function renderHealth(payload) {
   const health = payload.site_health || {};
   const sites = health.sites || {};
-  const labels = Object.entries(sites).map(([name, item]) => {
+  const knownKeys = new Set(siteConfig.map((site) => site.key));
+  const orderedSites = siteConfig
+    .filter((site) => sites[site.key])
+    .map((site) => [site.key, site.label, sites[site.key]]);
+  Object.entries(sites).forEach(([key, item]) => {
+    if (!knownKeys.has(key)) orderedSites.push([key, key, item]);
+  });
+  const labels = orderedSites.map(([key, label, item]) => {
     const status = item.status || "unverified";
-    const marker = status === "ok" ? "正常" : status === "partial" ? "部分成功" : "失败/待补跑";
-    return `<span class="health-${escapeHtml(status)}" title="${escapeHtml(item.reason || "")}">${escapeHtml(name)}：${marker}</span>`;
+    const marker = healthLabels[status] || status;
+    const detail = [key, item.reason].filter(Boolean).join("：");
+    return `<span class="health-${escapeHtml(status)}" title="${escapeHtml(detail)}">${escapeHtml(label)}：${escapeHtml(marker)}</span>`;
   });
   els.siteHealth.innerHTML = `<strong>六站采集状态（${escapeHtml(health.date || "未知日期")}）</strong>${labels.join("") || "<span>暂无状态</span>"}`;
 }
