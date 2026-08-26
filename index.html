@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>招标信息工作台</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20260826-six-sites" />
   </head>
   <body>
     <main class="shell">
@@ -17,17 +17,33 @@
       </header>
 
       <section class="stats" aria-label="数据概览">
-        <article>
+        <article class="stat-total">
           <span>入表项目</span>
           <strong id="totalCount">0</strong>
         </article>
-        <article>
+        <article data-source="采招网">
           <span>采招网</span>
-          <strong id="bidcenterCount">0</strong>
+          <strong>0</strong>
         </article>
-        <article>
-          <span>中招/华润</span>
-          <strong id="publicCount">0</strong>
+        <article data-source="华润守正">
+          <span>华润守正</span>
+          <strong>0</strong>
+        </article>
+        <article data-source="中招联合">
+          <span>中招联合</span>
+          <strong>0</strong>
+        </article>
+        <article data-source="中国招标投标公共服务平台" title="中国招标投标公共服务平台">
+          <span>公共服务平台</span>
+          <strong>0</strong>
+        </article>
+        <article data-source="机电产品招标投标电子交易平台" title="机电产品招标投标电子交易平台">
+          <span>机电产品交易平台</span>
+          <strong>0</strong>
+        </article>
+        <article data-source="必联网">
+          <span>必联网</span>
+          <strong>0</strong>
         </article>
       </section>
 
@@ -77,6 +93,6 @@
       </section>
     </main>
 
-    <script src="app.js"></script>
+    <script src="app.js?v=20260826-six-sites"></script>
   </body>
 </html>
